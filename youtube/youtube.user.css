@@ -140,4 +140,20 @@
 
   /* End Video Player */
 
+
+
+    /*  Related Sidebar
+   *  ===============
+   */
+
+   #related {
+    yt-related-chip-cloud-renderer,
+    ytd-reel-shelf-renderer
+    {
+      display: none;
+    }
+  }
+
+/* End Related Sidebar */
+
 }
