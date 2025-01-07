@@ -2,7 +2,7 @@
 @name           Lemon's YouTube Fixes
 @description    Opinionated YouTube Fixes
 @namespace      github.com/unseen-ninja/userstyles
-@version        2025.11.07.1
+@version        2025.11.07.3
 @author         unseen;ninja
 @preprocessor   uso
 @updateURL      https://github.com/unseen-ninja/userstyles/raw/main/youtube/youtube.user.css
@@ -167,7 +167,7 @@
       #teaser-carousel,
       ytd-metadata-row-container-renderer,
       /* Download Button */
-      actions-inner
+      #actions-inner ytd-download-button-renderer
       {
         display: none;
       }
