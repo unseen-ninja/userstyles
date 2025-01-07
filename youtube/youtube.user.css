@@ -154,6 +154,25 @@
     }
   }
 
-/* End Related Sidebar */
+  /* End Related Sidebar */
+
+
+
+  /*  Video Metadata
+   *  ==============
+   */
+
+    ytd-watch-metadata {
+      /* Game and Chat references */
+      #teaser-carousel,
+      ytd-metadata-row-container-renderer,
+      /* Download Button */
+      actions-inner
+      {
+        display: none;
+      }
+    }
+
+  /* End Video Metadata */
 
 }
