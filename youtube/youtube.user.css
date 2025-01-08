@@ -2,7 +2,7 @@
 @name           Lemon's YouTube Fixes
 @description    Opinionated YouTube Fixes
 @namespace      github.com/unseen-ninja/userstyles
-@version        2025.11.07.3
+@version        2025.11.08.1
 @author         unseen;ninja
 @preprocessor   uso
 @updateURL      https://github.com/unseen-ninja/userstyles/raw/main/youtube/youtube.user.css
@@ -113,8 +113,8 @@
 
     ytd-app:has(#full-bleed-container #player-container) {
 
-        --ytd-masthead-height: 0;
-        --ytd-toolbar-height: 0;
+        --ytd-masthead-height: 0 !important;
+        --ytd-toolbar-height: 0 !important;
 
         #masthead-container #masthead {
           opacity: 0;
