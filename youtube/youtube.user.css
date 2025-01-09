@@ -2,7 +2,7 @@
 @name           Lemon's YouTube Fixes
 @description    Opinionated YouTube Fixes
 @namespace      github.com/unseen-ninja/userstyles
-@version        2025.11.08.1
+@version        2025.11.09.1
 @author         unseen;ninja
 @preprocessor   uso
 @updateURL      https://github.com/unseen-ninja/userstyles/raw/main/youtube/youtube.user.css
@@ -78,6 +78,13 @@
   /*  Global
    *  =========
    */
+
+   /* This fixes a bug where these variables would bleed out of the
+      /watch sub-page target and messing with other layouts. */
+    ytd-app {
+      --ytd-masthead-height: inherit;
+      --ytd-toolbar-height: inherit;
+    }
 
     /* Watched Text */
     #progress.ytd-thumbnail-overlay-resume-playback-renderer::before {
