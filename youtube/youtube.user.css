@@ -2,7 +2,7 @@
 @name           Lemon's YouTube Fixes
 @description    Opinionated YouTube Fixes
 @namespace      github.com/unseen-ninja/userstyles
-@version        2025.11.09.1
+@version        2026.13.02.1
 @author         unseen;ninja
 @preprocessor   uso
 @updateURL      https://github.com/unseen-ninja/userstyles/raw/main/youtube/youtube.user.css
@@ -34,31 +34,33 @@
   /*  Sidebar
    *  =======
    */
-
-    /* Shorts */
-    #guide-renderer > #sections ytd-guide-entry-renderer:nth-child(2),
-    ytd-mini-guide-renderer ytd-mini-guide-entry-renderer:nth-child(2),
-    /* Music */
-    #guide-renderer > #sections ytd-guide-entry-renderer:nth-child(4),
-    ytd-mini-guide-renderer ytd-mini-guide-entry-renderer:nth-child(4),
-    /* Your Videos */
-    #guide-renderer #section-items ytd-guide-entry-renderer:nth-child(3),
-    /* Liked Videos */
-    #guide-renderer #section-items ytd-guide-entry-renderer:nth-child(5),
+    
     /* Subscriptions */
     #guide-renderer ytd-guide-section-renderer:nth-child(2),
+    /* You */
+    #guide-renderer ytd-guide-section-renderer:nth-child(3) #header,
+    /* Playlists */
+    #guide-renderer ytd-guide-section-renderer:nth-child(3) #section-items ytd-guide-entry-renderer:nth-child(2),
+    /* Liked Videos */
+    #guide-renderer ytd-guide-section-renderer:nth-child(3) #section-items ytd-guide-entry-renderer:nth-child(4),
+    /* Your Videos */
+    #guide-renderer ytd-guide-section-renderer:nth-child(3) #section-items ytd-guide-entry-renderer:nth-child(5),
+    /* Show More */
+    #guide-renderer ytd-guide-section-renderer:nth-child(3) #section-items ytd-guide-collapsible-entry-renderer,
+    
     /* Explore */
-    #guide-renderer ytd-guide-section-renderer:nth-child(3),
-    /* More fom Youtube */
     #guide-renderer ytd-guide-section-renderer:nth-child(4),
+    /* More fom Youtube */
+    #guide-renderer ytd-guide-section-renderer:nth-child(5),
     /* Footer */
+    #guide-renderer ytd-guide-section-renderer:nth-child(6),
     #guide-renderer #footer,
     /* Downloads */
     ytd-guide-downloads-entry-renderer,
     ytd-mini-guide-entry-renderer[aria-label="Downloads"]
     {
         display: none;
-  }
+    }
 
   /* End Sidebar */
 
@@ -69,7 +71,12 @@
    */
 
     /* Top Category Slider */
+    ytd-rich-grid-renderer #header,
+    ytd-rich-grid-renderer #big-yoodle,
     ytd-feed-filter-chip-bar-renderer { display: none; }
+    
+    /* Frosted Glass Overlay Fix */
+    #frosted-glass.with-chipbar.ytd-app { height: 64px; }
 
   /* End Home Feed */
 
