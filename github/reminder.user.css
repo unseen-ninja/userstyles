@@ -2,13 +2,14 @@
 @name           Lemon's GitHub Reminders
 @description    Highlights open Issue and PRs for specified Users and Organisations
 @namespace      github.com/unseen-ninja/userstyles
-@version        2025.03.04
+@version        2026.03.26.1
 @author         unseen;ninja
 @preprocessor   uso
 @updateURL      https://github.com/unseen-ninja/userstyles/raw/main/github/reminder.user.css
 
 @advanced color prColour "PR Colour" "#8819EC"
 @advanced color issueColour "Issue Colour" "#EA33ED"
+@advanced color securityColour "Security Note Colour" "#F2978A"
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://github.com/unseen-ninja"),
@@ -16,23 +17,32 @@
                url-prefix("https://github.com/flexqmadness"),
                url-prefix("https://github.com/cascadefox") {
 
-    #pull-requests-repo-tab-count,
-    #issues-repo-tab-count {
-
-        font-weight: bold;
-        color: #EEEEF5 !important;
-
+    [data-tab-item="issues"],
+    [data-tab-item="security"],
+    [data-tab-item="pull-requests"] {
+        .prc-CounterLabel-CounterLabel-X-kRU {
+            font-weight: bold;
+            color: #EEEEF5 !important;
+        }
     }
 
+    [data-tab-item="issues"] .prc-CounterLabel-CounterLabel-X-kRU { background-color: /*[[issueColour]]*/ !important; }
+    [data-tab-item="security"] .prc-CounterLabel-CounterLabel-X-kRU { background-color: /*[[securityColour]]*/ !important; }
+    [data-tab-item="pull-requests"] .prc-CounterLabel-CounterLabel-X-kRU { background-color: /*[[prColour]]*/ !important; }
 
-    #pull-requests-repo-tab-count { background-color: /*[[prColour]]*/ !important; }
-    #issues-repo-tab-count { background-color: /*[[issueColour]]*/ !important; }
-
-
-    #pull-requests-repo-tab-count::before,
-    #issues-repo-tab-count::before { content: 'Open (' }
-
-    #pull-requests-repo-tab-count::after,
-    #issues-repo-tab-count::after { content: ')' }
-
+                   
+    [data-tab-item="issues"],
+    [data-tab-item="pull-requests"] {
+        .prc-CounterLabel-CounterLabel-X-kRU::before {
+            content: 'Open ('
+        }
+    }
+                   
+    [data-tab-item="issues"],
+    [data-tab-item="pull-requests"] {
+        .prc-CounterLabel-CounterLabel-X-kRU::after {
+            content: ')'
+        }
+    }
+                   
 }
