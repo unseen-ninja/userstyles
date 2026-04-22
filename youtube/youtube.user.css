@@ -39,12 +39,14 @@
     #guide-renderer ytd-guide-section-renderer:nth-child(2),
     /* You */
     #guide-renderer ytd-guide-section-renderer:nth-child(3) #header,
+    /* Your Channel */
+    #guide-renderer ytd-guide-section-renderer:nth-child(3) #section-items ytd-guide-entry-renderer:nth-child(1),
     /* Playlists */
-    #guide-renderer ytd-guide-section-renderer:nth-child(3) #section-items ytd-guide-entry-renderer:nth-child(2),
+    #guide-renderer ytd-guide-section-renderer:nth-child(3) #section-items ytd-guide-entry-renderer:nth-child(3),
     /* Liked Videos */
-    #guide-renderer ytd-guide-section-renderer:nth-child(3) #section-items ytd-guide-entry-renderer:nth-child(4),
-    /* Your Videos */
     #guide-renderer ytd-guide-section-renderer:nth-child(3) #section-items ytd-guide-entry-renderer:nth-child(5),
+    /* Your Videos */
+    #guide-renderer ytd-guide-section-renderer:nth-child(3) #section-items ytd-guide-entry-renderer:nth-child(6),
     /* Show More */
     #guide-renderer ytd-guide-section-renderer:nth-child(3) #section-items ytd-guide-collapsible-entry-renderer,
     
